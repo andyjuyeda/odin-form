@@ -56,3 +56,9 @@ body {
 .content-container {
     width: 60%;
 }
+form > div {
+    display: flex;
+}
+input {
+    display: block;
+}
