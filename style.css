@@ -1,5 +1,6 @@
 :root {
     --form-div-height: 25vh;
+    --image-container-width: 40vw;
 }
 
 * {
@@ -19,7 +20,7 @@ body {
 }
 
 .image-container {
-    width: 35%;
+    width: var(--image-container-width);
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -58,7 +59,7 @@ body {
 }
 
 .content-container {
-    width: 65%;
+    width: calc(100vw - var(--image-container-width));
     background: #f3f3f3;
 }
 .content-container > div {
