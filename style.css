@@ -81,10 +81,19 @@ div.form {
     font-weight: 600;
 }
 
+form {
+    margin-top: 10px;
+}
+
 form > div {
     display: flex;
     padding: 5px 0;
     gap: 40px;
+}
+
+form div div {
+    display: flex;
+    flex-direction: column-reverse;
 }
 form label {
     text-transform: uppercase;
@@ -104,10 +113,57 @@ input:focus {
     outline: none;
     border: 1px solid rgb(48, 27, 238);
     border-radius: 3px;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-input:valid {
-    border: 1px solid rgb(12, 162, 94);
+input:valid:not(:focus) {
+    border: 1.5px solid rgb(12, 162, 94);
     border-radius: 3px;
+}
+
+input:valid:not(:focus)+label {
+    color: rgb(12, 162, 94);
+    align-items: center;
+}
+
+input:invalid:not(:focus).has-content {
+    border: 1.5px solid rgb(211, 24, 24);
+}
+
+input:invalid:not(:focus).has-content+label {
+    color: rgb(211, 24, 24);
+}
+
+button {
+    background: rgb(48, 27, 238);
+    width: 10rem;
+    height: 35px;
+    color:#ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 35px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+button:hover {
+    background: rgb(58, 36, 255);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.login-container a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
 }
